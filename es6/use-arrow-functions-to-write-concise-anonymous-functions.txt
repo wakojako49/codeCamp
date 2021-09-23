@@ -1,0 +1,9 @@
+/*
+//long form
+var magic = function() {
+  return new Date();
+};
+*/
+
+//short form arrow function
+const magic = () => new Date();
