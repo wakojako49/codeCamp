@@ -1,0 +1,21 @@
+let catName; //creates a warning so that it will not be over written.
+let quote;
+function catTalk() {
+  "use strict";//enables Strict Mode
+
+  catName = "Oliver";
+  quote = catName + " says Meow!";
+
+}
+catTalk();
+
+/* 
+Strict Mode is a reduced and safer feature set of JavaScript
+
+Strict mode makes several changes to normal JavaScript semantics:
+-Strict mode eliminates some JavaScript silent errors by changing them to throw errors.
+-Strict mode fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that’s not strict mode.
+-Strict mode prohibits some syntax likely to be defined in future versions of ECMAScript.
+-It prevents, or throws errors, when relatively “unsafe” actions are taken (such as gaining access to the global object).
+-Strict mode makes it easier to write “secure” JavaScript.
+*/

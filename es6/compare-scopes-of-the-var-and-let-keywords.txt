@@ -1,0 +1,26 @@
+function checkScope() {
+  let i = 'function scope';
+  if (!true) {
+    i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
+
+//Variables declared inside a { } block cannot be accessed from outside the block
+/*
+
+let printNumTwo;
+for (let i = 0; i < 3; i++) {
+  if (i === 2) {
+    printNumTwo = function() {
+      return i;
+    };
+  }
+}
+console.log(printNumTwo());
+console.log(i);
+
+console will display 2 and an error "i is not defined"
+*/
