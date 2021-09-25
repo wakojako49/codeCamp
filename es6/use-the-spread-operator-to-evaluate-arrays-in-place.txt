@@ -1,0 +1,19 @@
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];  // Change this line
+
+console.log(arr2);
+
+//spread operators can allow to expend arrays and other expression in place of multuple //parameters
+
+//instead of writing this:
+/*
+var arr = [6, 89, 3, 45];
+var maximus = Math.max.apply(null, arr); //apply() computes for max value in array
+
+can be this:
+
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr); //Math.max() would return NaN since it needs comma-seprated arguments
+ */
