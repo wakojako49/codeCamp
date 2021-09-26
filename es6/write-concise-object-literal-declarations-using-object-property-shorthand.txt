@@ -1,0 +1,12 @@
+const createPerson = (name, age, gender) => {
+  // Only change code below this line
+/*  return { //original code
+    name: name,
+    age: age,
+    gender: gender
+  };
+*/
+
+  return {name,age,gender};
+  // Only change code above this line
+};

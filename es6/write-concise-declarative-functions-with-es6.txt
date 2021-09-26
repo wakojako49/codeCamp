@@ -1,0 +1,28 @@
+// Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) { 
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+//functions in objects were written as 
+/**
+ * const person ={
+ * name: "taylor",
+ * sayHello: function(){
+ * return `hello! My name is ${this.name}.`};
+ * };
+ */
+
+//in es6 you can remove function
+/**
+ * const person ={
+ * name: "taylor",
+ * sayHello(){
+ * return `hello! My name is ${this.name}.`};
+ * };
+ */
