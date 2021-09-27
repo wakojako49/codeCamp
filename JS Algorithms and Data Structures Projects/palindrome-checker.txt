@@ -1,0 +1,40 @@
+function palindrome(str) {
+  //cleans words 
+  let pal = str.toLowerCase();
+  pal = pal.replace(/[^a-zA-Z0-9]/g,'');
+  pal = pal.split('');
+  //flips words for palindrome
+  const lap = [];
+  for(var i = 1 ; i <= pal.length ; i++ ){
+    lap.push(pal[pal.length - i]);
+  }
+
+  //checks for palindrone
+  let score = 0;
+  let j = 0;
+  let check = true;
+  //create for loop of length pal
+  /*
+  for(var i = 0; i <= pal.length; i++){
+    //check if pal[i] == lap [i]    
+    pal[i] == lap[i] ? score++ : score--;
+  }
+  // if true the score +1 | if not +0
+  // if sum of score == pal.length then IT IS A PALINDROME.
+  return (pal.length == score ?  true :  false);
+  */
+
+  while(j < pal.length||!check == true){
+    if(pal[j] == lap[j]){
+      j++
+    } else {
+      check = false;
+      break
+    }
+  }
+  return check;
+}
+
+
+
+palindrome("eye");
