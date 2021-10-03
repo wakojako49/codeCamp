@@ -1,0 +1,50 @@
+function convertToRoman(num) {
+ //split number into array
+ num = (''+num).split('');
+ num = num.map(x => parseInt(x));
+
+ //Arrays for convertions
+ const ones = ['',"I","II","III","IV","V","VI","VII","VIII","IX"];
+ const tens = ['', 'X','XX','XXX','XL','L','LX','LXX','LXXX','XC'];
+ const hundreds = ['', 'C','CC','CCC','CD','D','DC','DCC','DCCC','CM'];
+ const thousands = ['', 'M','MM','MMM','MMMM','V','VM','VMM','VMMM','VMMMM',]
+
+ //innitialise some variables
+ let RomanOnes = [];
+ let RomanTens = [];
+ let RomanHundreds = [];
+ let RomanThousands = [];
+
+ //conversion to Roman numeral per place value
+ //let RomanOnes = ones[num[num.length-(num.length-1)]];
+ //let RomanTens = tens[num[0]];
+ //let RomanTens = tens[num.length-(num.length-2)];
+ //let  RomanHundreds = hundreds[num.length-(num.length-3)];
+
+ switch(num.length){ // check length and convert
+   case 1:
+    RomanOnes = ones[num[0]];
+    break;
+  case 2:
+    RomanOnes = ones[num[1]];
+    RomanTens = tens[num[0]];
+    break;
+  case 3: 
+    RomanOnes = ones[num[2]];
+    RomanTens = tens[num[1]];
+    RomanHundreds = hundreds[num[0]]
+    break;
+  case 4:
+    RomanOnes = ones[num[3]];
+    RomanTens = tens[num[2]];
+    RomanHundreds = hundreds[num[1]];
+    RomanThousands = thousands[num[0]];
+    break;
+ }
+
+ //construct roman nums and return
+ const RomanNum = RomanThousands + RomanHundreds + RomanTens + RomanOnes;
+ return RomanNum;
+}
+
+console.log(convertToRoman(3999));
