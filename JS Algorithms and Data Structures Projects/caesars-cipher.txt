@@ -1,0 +1,24 @@
+function rot13(str) {
+  str = str.split('');
+  //str = str.charCodeAt();
+  str = str.map(element => char2num(element)); 
+
+  return str.join('');
+}
+
+function char2num(char){
+  char = char.charCodeAt(char);
+
+  if (char <= 90 && char >= 65){
+     char = char - 13;
+     if (char < 65){
+       char = 26+char;
+     }
+   }
+
+  char = String.fromCharCode(char);
+  return char;
+  }
+
+//console.log(rot13("A"));
+console.log(rot13("SERR PBQR PNZC"));
